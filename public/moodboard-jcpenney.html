@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC Penney Friends Shoot — Moodboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d0d0d;
+    font-family: 'Georgia', serif;
+    color: #f0ede6;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #7b2ff7, #f107a3, #ff6f00, #f7c948);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
+  }
+
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  header p {
+    margin-top: 12px;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    position: relative;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    padding: 32px 32px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* ---- Section label ---- */
+  .label {
+    grid-column: span 12;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #888;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #222;
+    margin-top: 8px;
+  }
+
+  /* ---- Backdrop swatches ---- */
+  .backdrop {
+    grid-column: span 2;
+    height: 180px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  }
+
+  .bd1 { background: linear-gradient(160deg, #7b2ff7 0%, #f107a3 100%); }
+  .bd2 { background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+  .bd3 { background: linear-gradient(160deg, #e96c3d 0%, #f7c948 100%); }
+  .bd4 { background: linear-gradient(160deg, #2d6a4f 0%, #95d5b2 100%); }
+  .bd5 { background: radial-gradient(ellipse at center, #c9b99a 0%, #8b7355 60%, #5c4a2a 100%); }
+  .bd6 { background: linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%); }
+
+  /* ---- Outfit palette ---- */
+  .outfit-block {
+    grid-column: span 4;
+    background: #161616;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .outfit-block h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+
+  .swatches {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.08);
+  }
+
+  .outfit-block p {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #999;
+  }
+
+  /* ---- Pose cards ---- */
+  .pose-card {
+    grid-column: span 3;
+    background: #161616;
+    border-radius: 10px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pose-card .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1;
+  }
+
+  .pose-card h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: #f0ede6;
+    line-height: 1.3;
+  }
+
+  .pose-card p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #777;
+  }
+
+  .pose-card .tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  .tag-classic { background: #1a1a2e; color: #7b9cff; }
+  .tag-playful { background: #2a1a0e; color: #f7a948; }
+  .tag-hero    { background: #1a2e1a; color: #7bff9c; }
+
+  /* ---- Vibe card (wide) ---- */
+  .vibe-card {
+    grid-column: span 6;
+    background: linear-gradient(135deg, #1a0533 0%, #0a0a1a 100%);
+    border: 1px solid #2a1a4a;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .vibe-card h2 {
+    font-size: 1.4rem;
+    color: #d4b3ff;
+    line-height: 1.3;
+  }
+
+  .vibe-card p {
+    font-size: 0.82rem;
+    line-height: 1.8;
+    color: #aaa;
+  }
+
+  .vibe-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .vibe-card ul li {
+    font-size: 0.78rem;
+    color: #bbb;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .vibe-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #7b2ff7;
+  }
+
+  /* ---- Props card ---- */
+  .props-card {
+    grid-column: span 6;
+    background: #0f1a10;
+    border: 1px solid #1a3a1a;
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  .props-card h2 {
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7bff9c;
+    margin-bottom: 16px;
+  }
+
+  .props-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .prop-item {
+    background: #0a150a;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.75rem;
+    color: #999;
+    line-height: 1.4;
+    border: 1px solid #1a2e1a;
+  }
+
+  .prop-item strong {
+    display: block;
+    color: #c8f7cc;
+    font-size: 0.78rem;
+    margin-bottom: 4px;
+  }
+
+  /* ---- Lighting note ---- */
+  .lighting-card {
+    grid-column: span 4;
+    background: #1a1510;
+    border: 1px solid #3a2e1a;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lighting-card h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #f7c948;
+  }
+
+  .lighting-card p {
+    font-size: 0.77rem;
+    line-height: 1.7;
+    color: #999;
+  }
+
+  /* ---- Shot list ---- */
+  .shots-card {
+    grid-column: span 8;
+    background: #161616;
+    border-radius: 10px;
+    padding: 28px;
+  }
+
+  .shots-card h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 16px;
+  }
+
+  .shots-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .shot-item {
+    font-size: 0.75rem;
+    color: #888;
+    padding: 8px 12px;
+    background: #0d0d0d;
+    border-radius: 6px;
+    border-left: 2px solid #333;
+    line-height: 1.4;
+  }
+
+  .shot-item.must {
+    border-left-color: #f107a3;
+    color: #ccc;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>JC Penney Friends Shoot</h1>
+  <p>Moodboard &nbsp;·&nbsp; Retro Studio Portrait &nbsp;·&nbsp; Kenny Ngoo Photography</p>
+</header>
+
+<div class="grid">
+
+  <!-- BACKDROP -->
+  <div class="label">Backdrop Options</div>
+
+  <div class="backdrop bd1">Purple → Pink</div>
+  <div class="backdrop bd2">Midnight Blue</div>
+  <div class="backdrop bd3">Orange → Gold</div>
+  <div class="backdrop bd4">Forest → Mint</div>
+  <div class="backdrop bd5">Warm Mottled Brown</div>
+  <div class="backdrop bd6">Storm Grey</div>
+
+  <!-- VIBE + PROPS -->
+  <div class="label">Direction & Props</div>
+
+  <div class="vibe-card">
+    <h2>The Vibe</h2>
+    <p>
+      Classic 80s–90s American portrait studio. Earnest, slightly stiff, colour-saturated. The charm is in committing fully — no ironic distance. Every pose is deliberate. Everyone looks directly at camera.
+    </p>
+    <ul>
+      <li>Warm, slightly overexposed highlight roll on faces</li>
+      <li>Coordinated outfits — not matching, but tonally unified</li>
+      <li>Gradient backdrop as the hero element</li>
+      <li>Props used with confidence, not apology</li>
+      <li>Mix of seated / kneeling / standing levels in every group frame</li>
+    </ul>
+  </div>
+
+  <div class="props-card">
+    <h2>Props</h2>
+    <div class="props-grid">
+      <div class="prop-item"><strong>Oversized Sunglasses</strong>Coloured or mirror lens. 80s shapes.</div>
+      <div class="prop-item"><strong>Feather Boa</strong>Classic JCP prop. Wrap or drape.</div>
+      <div class="prop-item"><strong>Balloon Bunch</strong>Solid colours matching backdrop.</div>
+      <div class="prop-item"><strong>Retro Boombox</strong>Or a prop cassette/CD player.</div>
+      <div class="prop-item"><strong>Varsity Jacket</strong>Shared between friends. Coordinate.</div>
+      <div class="prop-item"><strong>Silly String / Confetti</strong>Action shot use only.</div>
+      <div class="prop-item"><strong>Polaroid Camera</strong>Self-referential. Meta moment.</div>
+      <div class="prop-item"><strong>Hand-lettered Sign</strong>"Best Friends Since ____"</div>
+      <div class="prop-item"><strong>Matching Mugs</strong>Or disposable coffee cups.</div>
+    </div>
+  </div>
+
+  <!-- OUTFITS -->
+  <div class="label">Outfit Palette</div>
+
+  <div class="outfit-block">
+    <h3>Option A — Denim Tonal</h3>
+    <div class="swatches">
+      <div class="swatch" style="background:#1a3a6e;"></div>
+      <div class="swatch" style="background:#3b6ea5;"></div>
+      <div class="swatch" style="background:#7aa7d4;"></div>
+      <div class="swatch" style="background:#c4d9ef;"></div>
+      <div class="swatch" style="background:#ffffff;"></div>
+    </div>
+    <p>Light to dark denim tones. White tee or shirt as base. Everyone in denim — different washes, same family. Very classic JCP.</p>
+  </div>
+
+  <div class="outfit-block">
+    <h3>Option B — 90s Brights</h3>
+    <div class="swatches">
+      <div class="swatch" style="background:#ff2d55;"></div>
+      <div class="swatch" style="background:#ff9500;"></div>
+      <div class="swatch" style="background:#ffcc00;"></div>
+      <div class="swatch" style="background:#4cd964;"></div>
+      <div class="swatch" style="background:#007aff;"></div>
+    </div>
+    <p>Each person wears a different solid colour. High saturation. Coordinate to avoid clashing — assign colours before the shoot.</p>
+  </div>
+
+  <div class="outfit-block">
+    <h3>Option C — Warm Neutrals</h3>
+    <div class="swatches">
+      <div class="swatch" style="background:#c4a882;"></div>
+      <div class="swatch" style="background:#a07850;"></div>
+      <div class="swatch" style="background:#7a5c3a;"></div>
+      <div class="swatch" style="background:#e8d5b5;"></div>
+      <div class="swatch" style="background:#f5ede0;"></div>
+    </div>
+    <p>Cream, tan, camel, rust. Timeless. Works best against the Purple/Pink or Blue backdrops for contrast. Chunky knits welcome.</p>
+  </div>
+
+  <!-- POSES -->
+  <div class="label">Pose Library</div>
+
+  <div class="pose-card">
+    <div class="number">01</div>
+    <span class="tag tag-hero">Hero Shot</span>
+    <h3>Power Pyramid</h3>
+    <p>Front row seated/kneeling, back row standing. Structured levels. Hands visible. Everyone looks directly at camera with full commitment.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">02</div>
+    <span class="tag tag-classic">Classic</span>
+    <h3>Shoulder Stack</h3>
+    <p>Everyone stands side by side, outer arms around each other, leaning heads inward slightly. Formal but warm. Straight-on to camera.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">03</div>
+    <span class="tag tag-playful">Playful</span>
+    <h3>Chin Props</h3>
+    <p>All lie on stomachs in a circle or line, propping chins on hands. Exaggerated smiles. Slightly ridiculous — fully commit to it.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">04</div>
+    <span class="tag tag-playful">Playful</span>
+    <h3>The Jump</h3>
+    <p>Synchronised jump on 3-count. All leave ground at once. Arms up or out. Genuinely hard to nail — shoot burst mode. Worth the attempts.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">05</div>
+    <span class="tag tag-classic">Classic</span>
+    <h3>Back-to-Back</h3>
+    <p>Two people back-to-back, arms folded, slight smirk. Remaining friends arranged around them. Strong centre composition.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">06</div>
+    <span class="tag tag-hero">Hero Shot</span>
+    <h3>The Walk</h3>
+    <p>Walking toward camera in a line, spread wide. Matching energy — either ultra serious or laughing mid-step. Gradient backdrop behind.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">07</div>
+    <span class="tag tag-classic">Classic</span>
+    <h3>Seated Row</h3>
+    <p>All seated on a bench or floor, leaning into each other. One arm around the person next to them. Relaxed, natural — let it breathe.</p>
+  </div>
+
+  <div class="pose-card">
+    <div class="number">08</div>
+    <span class="tag tag-playful">Playful</span>
+    <h3>Piggyback Stack</h3>
+    <p>One person on another's back. Rest standing around them. Creates instant height variation and genuine laughter without trying.</p>
+  </div>
+
+  <!-- LIGHTING + SHOT LIST -->
+  <div class="label">Lighting & Shot List</div>
+
+  <div class="lighting-card">
+    <h3>Lighting Setup</h3>
+    <p><strong style="color:#f7c948;">Key light:</strong> Large softbox at 45° — soft, flattering. Slightly forward of subject plane.</p>
+    <p><strong style="color:#f7c948;">Fill:</strong> Reflector or second softbox at 50% power, opposite side. Keep shadows soft.</p>
+    <p><strong style="color:#f7c948;">Background light:</strong> Aim a bare strobe or kicker at the gradient backdrop. Controls how deep the colour reads. Feather it — don't blow it out.</p>
+    <p><strong style="color:#f7c948;">Colour temp:</strong> 5500K. Keep it neutral — the colour comes from the backdrop, not the light.</p>
+  </div>
+
+  <div class="shots-card">
+    <h3>Shot List</h3>
+    <div class="shots-list">
+      <div class="shot-item must">Full group — Power Pyramid, serious faces</div>
+      <div class="shot-item must">Full group — same pose, everyone laughing</div>
+      <div class="shot-item must">Full group — The Walk toward camera</div>
+      <div class="shot-item must">Chin props on floor</div>
+      <div class="shot-item">Pairs — back-to-back on each backdrop</div>
+      <div class="shot-item">Individual portrait each person — straight on, slight smile</div>
+      <div class="shot-item">Jump shot — expect 10+ attempts</div>
+      <div class="shot-item">Props in use — boombox, sunglasses, boa</div>
+      <div class="shot-item">Candid between setups — real laughter</div>
+      <div class="shot-item">Shoulder stack — each backdrop option</div>
+      <div class="shot-item">Seated row on floor, overhead angle</div>
+      <div class="shot-item">Piggyback variation</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>Kenny Ngoo Photography &nbsp;·&nbsp; JC Penney Friends Shoot &nbsp;·&nbsp; 2026</footer>
+
+</body>
+</html>

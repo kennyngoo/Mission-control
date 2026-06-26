@@ -1,0 +1,138 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lighting Diagram — JC Penney Friends Shoot</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --fg: #e5e7eb;
+    --muted: #a3adbd;
+    --line: #94a3b8;
+    --neutral: #334155;
+    --input: #1d4ed8;
+    --process: #4338ca;
+    --storage: #0f766e;
+    --external: #92400e;
+    --risk: #991b1b;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 14px/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  main {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+<main>
+<svg viewBox="0 0 860 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Arrow markers -->
+    <marker id="arr-yellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f7c948"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7b9cff"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f4a348"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7bff9c"/>
+    </marker>
+    <marker id="arr-muted" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="430" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#e5e7eb" letter-spacing="0.05em">LIGHTING SETUP — JC PENNEY FRIENDS SHOOT</text>
+  <text x="430" y="56" text-anchor="middle" font-size="11" fill="#6b7280" letter-spacing="0.12em">TOP-DOWN VIEW</text>
+
+  <!-- ── BACKDROP ── -->
+  <rect x="230" y="90" width="400" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="430" y="112" text-anchor="middle" font-size="13" font-weight="600" fill="#c4d9ef">GRADIENT BACKDROP</text>
+  <text x="430" y="128" text-anchor="middle" font-size="10" fill="#6b7280">Purple → Pink · or any chosen colour option</text>
+
+  <!-- ── BACKGROUND LIGHT ── -->
+  <!-- BG light body -->
+  <rect x="380" y="152" width="100" height="44" rx="6" fill="#1a2e1a" stroke="#2d5a2d" stroke-width="1.5"/>
+  <text x="430" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#7bff9c">BG LIGHT</text>
+  <text x="430" y="185" text-anchor="middle" font-size="10" fill="#4ade80">Bare strobe · 100%</text>
+  <!-- BG light arrow UP to backdrop -->
+  <line x1="430" y1="152" x2="430" y2="143" stroke="#7bff9c" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arr-green)"/>
+  <!-- BG light distance label -->
+  <text x="450" y="222" font-size="10" fill="#6b7280">1m behind subject</text>
+
+  <!-- ── SUBJECT GROUP ── -->
+  <ellipse cx="430" cy="340" rx="90" ry="50" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="430" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#e5e7eb">SUBJECT GROUP</text>
+  <text x="430" y="351" text-anchor="middle" font-size="10" fill="#94a3b8">Friends · 3–6 people</text>
+
+  <!-- ── KEY LIGHT (camera left = subject's right = left side of diagram) ── -->
+  <!-- Softbox body -->
+  <rect x="68" y="200" width="130" height="80" rx="8" fill="#1a1520" stroke="#4a2a7a" stroke-width="1.5"/>
+  <text x="133" y="228" text-anchor="middle" font-size="12" font-weight="700" fill="#d4b3ff">KEY LIGHT</text>
+  <text x="133" y="245" text-anchor="middle" font-size="10" fill="#a78bca">Large Softbox</text>
+  <text x="133" y="260" text-anchor="middle" font-size="10" fill="#a78bca">100% power · 45°</text>
+  <text x="133" y="274" text-anchor="middle" font-size="10" fill="#7c5fa8">~1.5m from subject</text>
+  <!-- Key light arrow to subject -->
+  <line x1="198" y1="265" x2="345" y2="325" stroke="#d4b3ff" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arr-yellow)"/>
+  <!-- Distance label -->
+  <text x="240" y="285" font-size="10" fill="#6b7280" transform="rotate(-20, 240, 285)">1.5m</text>
+
+  <!-- ── FILL LIGHT / REFLECTOR (camera right = subject's left = right side) ── -->
+  <rect x="662" y="200" width="130" height="80" rx="8" fill="#141a2a" stroke="#2a3a6a" stroke-width="1.5"/>
+  <text x="727" y="228" text-anchor="middle" font-size="12" font-weight="700" fill="#7b9cff">FILL LIGHT</text>
+  <text x="727" y="245" text-anchor="middle" font-size="10" fill="#6b82c8">Softbox or Reflector</text>
+  <text x="727" y="260" text-anchor="middle" font-size="10" fill="#6b82c8">50% power · 45°</text>
+  <text x="727" y="274" text-anchor="middle" font-size="10" fill="#4a5a9a">~2m from subject</text>
+  <!-- Fill light arrow to subject -->
+  <line x1="662" y1="265" x2="515" y2="325" stroke="#7b9cff" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arr-blue)"/>
+  <!-- Distance label -->
+  <text x="580" y="278" font-size="10" fill="#6b7280" transform="rotate(20, 580, 278)">2m</text>
+
+  <!-- ── CAMERA ── -->
+  <rect x="370" y="510" width="120" height="55" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="430" y="534" text-anchor="middle" font-size="13" font-weight="600" fill="#e5e7eb">CAMERA</text>
+  <text x="430" y="551" text-anchor="middle" font-size="10" fill="#94a3b8">Sony A7IV · 85mm</text>
+  <!-- Camera arrow up to subject -->
+  <line x1="430" y1="510" x2="430" y2="393" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-muted)"/>
+
+  <!-- ── FLOOR ZONE (shooting area dashed rect) ── -->
+  <rect x="210" y="270" width="440" height="170" rx="10"
+        fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="6 4" opacity="0.5"/>
+  <text x="215" y="266" font-size="9" fill="#475569" letter-spacing="0.1em">SHOOTING AREA</text>
+
+  <!-- ── ANGLE GUIDES (light cone lines, faint) ── -->
+  <!-- Key cone left edge -->
+  <line x1="198" y1="240" x2="350" y2="295" stroke="#4a2a7a" stroke-width="0.8" opacity="0.4"/>
+  <!-- Key cone right edge -->
+  <line x1="198" y1="280" x2="345" y2="375" stroke="#4a2a7a" stroke-width="0.8" opacity="0.4"/>
+  <!-- Fill cone left edge -->
+  <line x1="662" y1="240" x2="510" y2="295" stroke="#2a3a6a" stroke-width="0.8" opacity="0.4"/>
+  <!-- Fill cone right edge -->
+  <line x1="662" y1="280" x2="515" y2="375" stroke="#2a3a6a" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ── LEGEND ── -->
+  <rect x="50" y="600" width="760" height="72" rx="8" fill="#161e2e" stroke="#1e293b" stroke-width="1"/>
+  <text x="74" y="620" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="0.15em">NOTES</text>
+  <!-- Row 1 -->
+  <circle cx="74" cy="638" r="5" fill="#d4b3ff"/>
+  <text x="86" y="642" font-size="10" fill="#ccc">Key light: large softbox, 45° camera-left, ~1.5m — main source, soft shadows</text>
+  <circle cx="74" cy="656" r="5" fill="#7b9cff"/>
+  <text x="86" y="660" font-size="10" fill="#ccc">Fill: reflector or second softbox, 45° camera-right, ~2m, 50% power — lifts shadow side</text>
+  <!-- Row 2 -->
+  <circle cx="400" cy="638" r="5" fill="#7bff9c"/>
+  <text x="412" y="642" font-size="10" fill="#ccc">BG light: bare strobe aimed at backdrop, feathered — saturates gradient colour</text>
+  <text x="412" y="660" font-size="10" fill="#6b7280">Colour temp: 5500K · Backdrop ~1m behind subject plane to avoid spill shadows</text>
+</svg>
+</main>

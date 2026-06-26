@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #0f1117;
+  --color-navy-sidebar: #141820;
+  --color-navy-card: #1a1f2e;
+  --color-navy-border: #1e2435;
+  --color-accent-purple: #7c3aed;
+  --color-accent-green: #22c55e;
+  --color-accent-pink: #ec4899;
+  --color-accent-orange: #f97316;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #0f1117;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -248,6 +248,47 @@ async function main() {
     lines.push('');
   }
 
+  // Daily motivation quote (rotates by day of year)
+  const quotes = [
+    ["The secret of getting ahead is getting started.", "Mark Twain"],
+    ["Do the work. Especially the work you're avoiding.", "Unknown"],
+    ["Your work is going to fill a large part of your life. Do what you believe is great work.", "Steve Jobs"],
+    ["The best time to plant a tree was 20 years ago. The second best time is now.", "Chinese Proverb"],
+    ["Don't watch the clock; do what it does. Keep going.", "Sam Levenson"],
+    ["You don't have to be great to start, but you have to start to be great.", "Zig Ziglar"],
+    ["The difference between ordinary and extraordinary is that little extra.", "Jimmy Johnson"],
+    ["Success is not final, failure is not fatal: it is the courage to continue that counts.", "Winston Churchill"],
+    ["Whatever you are, be a good one.", "Abraham Lincoln"],
+    ["Start where you are. Use what you have. Do what you can.", "Arthur Ashe"],
+    ["The only way to do great work is to love what you do.", "Steve Jobs"],
+    ["In the middle of every difficulty lies opportunity.", "Albert Einstein"],
+    ["It always seems impossible until it's done.", "Nelson Mandela"],
+    ["Believe you can and you're halfway there.", "Theodore Roosevelt"],
+    ["The future belongs to those who believe in the beauty of their dreams.", "Eleanor Roosevelt"],
+    ["Hardships often prepare ordinary people for an extraordinary destiny.", "C.S. Lewis"],
+    ["Be faithful in small things because it is in them that your strength lies.", "Mother Teresa"],
+    ["Commit to the Lord whatever you do, and he will establish your plans.", "Proverbs 16:3"],
+    ["I can do all things through Christ who strengthens me.", "Philippians 4:13"],
+    ["For I know the plans I have for you — plans to prosper you and not to harm you.", "Jeremiah 29:11"],
+    ["Strength and dignity are her clothing, and she laughs at the time to come.", "Proverbs 31:25"],
+    ["Every expert was once a beginner.", "Helen Hayes"],
+    ["The road to success and the road to failure are almost exactly the same.", "Colin R. Davis"],
+    ["Opportunities don't happen. You create them.", "Chris Grosser"],
+    ["Success usually comes to those who are too busy to be looking for it.", "Henry David Thoreau"],
+    ["Don't be afraid to give up the good to go for the great.", "John D. Rockefeller"],
+    ["I find that the harder I work, the more luck I seem to have.", "Thomas Jefferson"],
+    ["The only limit to our realization of tomorrow will be our doubts of today.", "Franklin D. Roosevelt"],
+    ["What you get by achieving your goals is not as important as what you become.", "Thoreau"],
+    ["Light tomorrow with today.", "Elizabeth Barrett Browning"],
+  ];
+
+  const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+  const [quoteText, quoteAuthor] = quotes[dayOfYear % quotes.length];
+
+  lines.push('');
+  lines.push(`💬 ${quoteText}`);
+  lines.push(`   — ${quoteAuthor}`);
+
   const summary = lines.join('\n').trim();
   console.log(summary);
 

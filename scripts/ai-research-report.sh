@@ -10,31 +10,41 @@
 
 Use the brave-web-search skill for news and the stock-market-pro skill for price data.
 
-Structure the report exactly as follows:
+BEFORE DRAFTING: verify the current date and status of any events you plan to mention. If something has already happened, state it with the actual date. If a date is uncertain, flag it as 'unconfirmed'. Never write predictive language like 'earnings in ~48 hours' for events that may have already occurred.
 
 ---
-**AI Infrastructure Daily — $(date '+%A %-d %B %Y')**
+TARGET STRUCTURE (follow exactly, include only sections with new content):
 
-**1. CORE HOLDINGS CHECK**
-Run price quotes for: MU (Micron), 000660.KS (SK Hynix), 005930.KS (Samsung), DRAM (Roundhill Memory ETF), VGS, AMZN, NDQ.
-Search for overnight news and analyst commentary on each. Focus on earnings, guidance, analyst upgrades/downgrades, and any DRAM/HBM-specific developments.
+**AI Infrastructure Daily — [DATE]**
+Thesis health: [solid / cautious / watch closely] | Next catalyst: [event + verified date, or 'unconfirmed']
 
-**2. HBM SUPPLY/DEMAND SIGNALS**
-HBM = High Bandwidth Memory, the high-performance DRAM used in AI accelerators (e.g. Nvidia H100/H200/B200).
-Search for: hyperscaler capex plans (Microsoft, Google, Amazon, Meta), HBM pricing or contract news, new fab capacity timelines. Flag anything relevant to the mid-2027 supply inflection point.
+**CORE HOLDINGS**
+Table format only: Ticker | Price | % Change | One-line driver
+Tickers: DRAM, VGS.AX, NDQ.AX, AMZN. No other tickers in this table.
 
-**3. BROADER AI BUILDOUT STOCKS**
-Search for notable developments in AI supply chain companies: chips (NVDA, AMD, INTC, AVGO, MRVL, TSM), power/energy (VST, CEG, ETR, NRG), networking (ANET, NOK, CSCO), cooling/infrastructure (VRT, SMCI, DELL). Only include names with concrete competitive advantages — skip hype-driven mentions with no substance.
+**WHAT'S NEW TODAY** (3-5 bullets max)
+Actual new developments from the past 24 hours only. No routine price moves. No static data (market cap, PE, EPS) unless materially changed.
+Each bullet = one complete, self-contained thought. No merged sentences. No bolded header with no content underneath.
+Each fact appears exactly once in the entire report. Do not repeat the same news item in another section.
+Include Micron (MU), SK Hynix, or Samsung ONLY if there is a genuinely material development affecting the DRAM ETF thesis (major earnings surprise, HBM pricing shift, capacity change). Skip entirely on days with nothing material.
 
-**4. TECH NEWS ROUNDUP**
-Search for top tech news from the past 24 hours. For each item, add one line: 'Thesis relevance: [direct / indirect / none]' with a brief reason.
+**SIGNALS**
+Use emoji color tags. Plain text labels do not count.
+🟢 [thesis-positive: capex increases, HBM price firming, new AI chip design wins, fab expansion]
+🟡 [watch items: mixed signals, early-stage, unconfirmed]
+🔴 [thesis risks: capex cuts, pricing collapses, demand warnings, China/CXMT supply ramp]
+Separate macro noise (market selloffs, profit-taking) from genuine thesis signals. Each item listed once only.
 
-**5. SIGNAL VS NOISE**
-Classify today's key developments:
-🟢 GREEN — thesis-positive (capex increases, HBM price firming, new AI chip design wins, fab expansion confirmed)
-🟡 AMBER — watch items (mixed signals, early-stage, unconfirmed)
-🔴 RED — thesis risks (capex cuts, pricing collapses, demand warnings, substitute technology risk)
-Clearly separate macro noise (broad market selloff, profit-taking, index rebalancing) from genuine thesis signals.
+**NEXT CATALYST** (one item only, verified date or flagged unconfirmed)
+
+**MICRON / SK HYNIX / SAMSUNG** (include this section only if materially relevant today)
 
 ---
-Tone: factual, plain English, no spin. Define any new jargon inline. End with one sentence on the overall thesis health today."
+PRE-SEND CHECKLIST (run before sending):
+- Any merged or broken bullets?
+- Any fact repeated across sections?
+- Color emoji present in signals section?
+- Any unverified predictive language?
+- Length appropriate? Drop Broader AI Buildout and Tech News Roundup unless directly thesis-relevant.
+
+Tone: factual, plain English, no spin, no em dashes. Define jargon inline on first use."
